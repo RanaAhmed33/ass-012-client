@@ -75,3 +75,4 @@ const StudentClass = () => {
     );
 };
 
+export default StudentClass;
