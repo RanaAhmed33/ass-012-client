@@ -21,3 +21,4 @@ const DashbordNavbar = ({ activeHambuarget, setActiveHamburget }) => {
     );
 };
 
+export default DashbordNavbar;
