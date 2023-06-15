@@ -68,4 +68,3 @@ const SingUp = () => {
     );
 };
 
-export default SingUp;
