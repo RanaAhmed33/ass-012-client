@@ -42,10 +42,7 @@ const StudentClass = () => {
 
     }
 
-    const notUser = () => {
-        alert('first you have to login then select classes')
-        navigate("/login", { state: { from: location } })
-    }
+
 
     return (
         <Container>
