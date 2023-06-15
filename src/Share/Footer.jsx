@@ -24,9 +24,7 @@ const Footer = () => {
                             <li style={{ listStyle: 'none' }}><i style={{ fontSize: '20px', color: 'white' }} className="fa-brands fa-twitter"></i></li>
                             <li style={{ listStyle: 'none' }}><i style={{ fontSize: '20px', color: 'white' }} className="fa-brands fa-pinterest"></i></li>
                         </ul>
-                        <div>
-                            <input type="email" className='p-2' placeholder='Email' />
-                        </div>
+
                     </Col>
 
                 </Row>
