@@ -6,14 +6,14 @@ const DashbordWebUser = () => {
 
     const { isLoading, error, data = [], refetch } = useQuery({
         queryKey: ['classData'],
-        queryFn: () => fetch(`http://localhost:5000/users`)
+        queryFn: () => fetch(`https://project12-server.vercel.app/users`)
             .then(res => {
                 return res.json()
             })
     })
 
     const updateteacher = (email) => {
-        fetch(`http://localhost:5000/adminrole/teacher/${email}`, {
+        fetch(`https://project12-server.vercel.app/adminrole/teacher/${email}`, {
             method: "PUT"
         })
             .then(res => res.json())
@@ -23,7 +23,7 @@ const DashbordWebUser = () => {
     }
 
     const updateadmin = (email) => {
-        fetch(`http://localhost:5000/adminrole/admin/${email}`, {
+        fetch(`https://project12-server.vercel.app/adminrole/admin/${email}`, {
             method: "PUT"
         })
             .then(res => res.json())

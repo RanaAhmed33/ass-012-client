@@ -11,7 +11,7 @@ const SelectedClasses = () => {
 
     const { isLoading, error, data = [], refetch } = useQuery({
         queryKey: ['classData'],
-        queryFn: () => fetch(`http://localhost:5000/purchase/${user?.email}`)
+        queryFn: () => fetch(`https://project12-server.vercel.app/purchase/${user?.email}`)
             .then(res => {
                 return res.json()
             })

@@ -75,7 +75,7 @@ const router = createBrowserRouter(
                 {
                     path: '/dashbord/edit/:id',
                     element: <EditClass></EditClass>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/singleclass/${params.id}`)
+                    loader: ({ params }) => fetch(`https://project12-server.vercel.app/singleclass/${params.id}`)
                 },
             ]
         },

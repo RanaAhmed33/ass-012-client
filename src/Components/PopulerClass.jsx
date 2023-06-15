@@ -5,7 +5,7 @@ const PopulerClass = () => {
     const [populer, setPopuler] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allclassapprove`)
+        fetch(`https://project12-server.vercel.app/allclassapprove`)
             .then(res => res.json())
             .then(data => setPopuler(data.slice(0, 6)))
     }, [])
