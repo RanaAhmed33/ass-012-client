@@ -1,0 +1,10 @@
+.message {
+    padding: 100px 0px;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.681), rgba(0, 0, 0, 0.681)), url(../src//assets/backgorund.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
