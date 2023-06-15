@@ -30,7 +30,7 @@ const ClassessDashbord = () => {
                     status: "pending"
 
                 }
-                fetch(`https://project12-server.vercel.app/class`, {
+                fetch(`https://project12-server-ranaahmed33.vercel.app/class`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

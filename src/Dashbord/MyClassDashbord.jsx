@@ -36,7 +36,7 @@ const MyClassDashbord = () => {
 
 
     // useEffect(() => {
-    //     fetch(`https://project12-server.vercel.app/class/${user?.email}`)
+    //     fetch(`https://project12-server-ranaahmed33.vercel.app/class/${user?.email}`)
     //         .then(res => res.json())
     //         .then(data => {
     //             setClassData(data)
@@ -47,7 +47,7 @@ const MyClassDashbord = () => {
 
     const { isLoading, error, data = [], refetch } = useQuery({
         queryKey: ['classData'],
-        queryFn: () => fetch(`https://project12-server.vercel.app/class/${user?.email}`)
+        queryFn: () => fetch(`https://project12-server-ranaahmed33.vercel.app/class/${user?.email}`)
             .then(res => {
                 return res.json()
             })
@@ -57,7 +57,7 @@ const MyClassDashbord = () => {
     const deleteData = (id) => {
         const ready = confirm('are you sure you want to delete this data ? ')
         if (ready) {
-            fetch(`https://project12-server.vercel.app/deleteclass/${id}`, {
+            fetch(`https://project12-server-ranaahmed33.vercel.app/deleteclass/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

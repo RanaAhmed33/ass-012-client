@@ -33,7 +33,7 @@ const EditClass = () => {
                     status: "pending"
 
                 }
-                fetch(`https://project12-server.vercel.app/dashbord/edit/${id}`, {
+                fetch(`https://project12-server-ranaahmed33.vercel.app/dashbord/edit/${id}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

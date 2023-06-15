@@ -19,14 +19,14 @@ const DashbordAllClasses = () => {
 
     const { isLoading, error, data = [], refetch } = useQuery({
         queryKey: ['classData'],
-        queryFn: () => fetch(`https://project12-server.vercel.app/allclass`)
+        queryFn: () => fetch(`https://project12-server-ranaahmed33.vercel.app/allclass`)
             .then(res => {
                 return res.json()
             })
     })
 
     const handeleDenied = () => {
-        fetch(`https://project12-server.vercel.app/classupdate/${getId}`, {
+        fetch(`https://project12-server-ranaahmed33.vercel.app/classupdate/${getId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +42,7 @@ const DashbordAllClasses = () => {
     }
 
     const deniedInfo = () => {
-        fetch(`https://project12-server.vercel.app/denied/${getId}`, {
+        fetch(`https://project12-server-ranaahmed33.vercel.app/denied/${getId}`, {
             method: 'PUT'
         })
             .then(res => res.json())
@@ -55,7 +55,7 @@ const DashbordAllClasses = () => {
     const handelApproved = (id) => {
         const ready = confirm('are you sure you want to approved this class')
         if (ready) {
-            fetch(`https://project12-server.vercel.app/apporved/${id}`, {
+            fetch(`https://project12-server-ranaahmed33.vercel.app/apporved/${id}`, {
                 method: 'PUT'
             })
                 .then(res => res.json())

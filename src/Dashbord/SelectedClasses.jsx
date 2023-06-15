@@ -11,7 +11,7 @@ const SelectedClasses = () => {
 
     const { isLoading, error, data = [], refetch } = useQuery({
         queryKey: ['classData'],
-        queryFn: () => fetch(`https://project12-server.vercel.app/purchase/${user?.email}`)
+        queryFn: () => fetch(`https://project12-server-ranaahmed33.vercel.app/purchase/${user?.email}`)
             .then(res => {
                 return res.json()
             })
@@ -21,6 +21,19 @@ const SelectedClasses = () => {
         return <HashLoader color="#36d7b7" />
     }
     refetch()
+
+
+    const handleDelete = (id) => {
+        fetch(`https://project12-server-ranaahmed33.vercel.app/deleteSelectClass/${id}`, {
+            method: "DELETE"
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                refetch()
+            })
+    }
+
     return (
         <Container>
             <Row>
@@ -36,6 +49,7 @@ const SelectedClasses = () => {
                                 <th className='border border-1 border border-1 border border-1 border border-1 border border-1 text-center'>Available Seats</th>
                                 <th className='border border-1 border border-1 border border-1 border border-1 border border-1 text-center'>Price</th>
                                 <th className='border border-1 border border-1 border border-1 border border-1 border border-1 text-center'>payment</th>
+                                <th className='border border-1 border border-1 border border-1 border border-1 border border-1 text-center'>Delete</th>
                             </tr>
                         </thead>
                         {
@@ -50,6 +64,7 @@ const SelectedClasses = () => {
                                     <td className='border border-1 text-center'>
                                         <Link style={{ textDecoration: 'none' }}><button className='btn btn-success'>Pay<i class="mx-2 fa-solid fa-arrow-right"></i></button></Link>
                                     </td>
+                                    <td className='border border-1 text-center'><button className='btn btn-danger' onClick={() => handleDelete(slectClass._id)} >Delete</button></td>
                                 </tr>
                             </tbody>)
                         }

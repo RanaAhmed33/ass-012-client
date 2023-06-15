@@ -16,13 +16,13 @@ const AuthProvider = ({ children }) => {
     const [teacher, setTeacher] = useState(false)
 
     useEffect(() => {
-        fetch(`https://project12-server.vercel.app/user/${user?.email}`)
+        fetch(`https://project12-server-ranaahmed33.vercel.app/user/${user?.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user?.email])
 
     useEffect(() => {
-        fetch(`https://project12-server.vercel.app/teacher/${user?.email}`)
+        fetch(`https://project12-server-ranaahmed33.vercel.app/teacher/${user?.email}`)
             .then(res => res.json())
             .then(data => setTeacher(data.teacher))
     }, [user?.email])
@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
                         displayName: user?.displayName,
                         img: user?.photoURL
                     }
-                    fetch(`https://project12-server.vercel.app/users/${user?.email}`, {
+                    fetch(`https://project12-server-ranaahmed33.vercel.app/users/${user?.email}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'
@@ -120,7 +120,7 @@ const AuthProvider = ({ children }) => {
                     displayName: user?.displayName,
                     img: user?.photoURL
                 }
-                fetch(`https://project12-server.vercel.app/users/${user?.email}`, {
+                fetch(`https://project12-server-ranaahmed33.vercel.app/users/${user?.email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

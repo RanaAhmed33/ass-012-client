@@ -10,7 +10,7 @@ const StudentClass = () => {
     const [allclass, setAllClass] = useState([])
     const { user } = useContext(AuthContext)
     useEffect(() => {
-        fetch(`https://project12-server.vercel.app/allclassapprove`)
+        fetch(`https://project12-server-ranaahmed33.vercel.app/allclassapprove`)
             .then(res => res.json())
             .then(data => setAllClass(data))
     }, [])
@@ -27,7 +27,7 @@ const StudentClass = () => {
             price: data.price,
         }
         if (ready) {
-            fetch(`https://project12-server.vercel.app/purchase`, {
+            fetch(`https://project12-server-ranaahmed33.vercel.app/purchase`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
