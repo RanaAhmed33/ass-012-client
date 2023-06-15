@@ -17,4 +17,3 @@ const Admin = ({ children }) => {
     return <Navigate to="/" state={{ from: location }} />
 };
 
-export default Admin;
