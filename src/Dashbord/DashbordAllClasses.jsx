@@ -125,3 +125,4 @@ const DashbordAllClasses = () => {
     );
 };
 
+export default DashbordAllClasses;
